@@ -1,18 +1,25 @@
 import React, { useState } from 'react';
 import '../App.css';
-import NavigationBar from './NavigationBar';
 import TitleList from './TitleList';
 import { useSelector, useDispatch } from 'react-redux';
-import { Redirect } from 'react-router-dom';
-import { sendListObject } from '../actions';
+import { sendListObject, sendSelectedList } from '../actions';
 import axios from 'axios';
+import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
+import { MdDelete } from 'react-icons/md';
+import { MdModeEdit } from 'react-icons/md';
+import { AiFillFolderOpen } from 'react-icons/ai';
+import { FaUser } from 'react-icons/fa';
+import LoginPage from './LoginPage';
+import ListItems from './ListItems';
+import EditTitle from './EditTitle';
+import LogOutPage from './LogOutPage';
 
-let MyLists = (props) => {
-  const openList = useSelector((state) => state.openList);
-  const openEditTitle = useSelector((state) => state.openEditTitle);
+let MyLists = () => {
   const selectedList = useSelector((state) => state.selectedList);
   const listObject = useSelector((state) => state.listObject);
   const loginData = useSelector((state) => state.loginData);
+  const loggedIn = useSelector((state) => state.loggedIn);
+
   const id = useSelector((state) => state.id);
 
   const dispatch = useDispatch();
@@ -21,7 +28,8 @@ let MyLists = (props) => {
     setListTitle(enteredText.target.value);
   };
 
-  const addTitleHandler = () => {
+  const addTitleHandler = (e) => {
+    e.preventDefault();
     if (listTitle !== '') {
       var idRandom = Math.random().toString();
       dispatch(
@@ -77,29 +85,78 @@ let MyLists = (props) => {
       .then((res) => {
         console.log('updated successfully');
       });
+    dispatch(
+      sendSelectedList({
+        id: '',
+        title: '',
+        list: [],
+        budget: 0,
+      })
+    );
   };
 
-  const ListOfTitles = listObject.map((item) => <TitleList item={item} />);
+  const ListOfTitles = listObject.map((item) => (
+    <TitleList item={item} key={item.id} />
+  ));
 
-  return !openList && !openEditTitle ? (
-    <div className='fullbackground'>
-      <NavigationBar title='My Lists' onDelete={removeTitleHandler} />
-      <input
-        placeholder='New List'
-        className='textField'
-        value={listTitle}
-        onChange={handleListTitle}
-        type='text'
-      />
-      <button onClick={addTitleHandler} className='createListButton'>
-        CREATE
-      </button>
-      {ListOfTitles}
-    </div>
-  ) : openList ? (
-    <Redirect push to='/ListItems' />
-  ) : (
-    <Redirect push to='/EditTitle' />
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route exact path='/Login' component={LoginPage} />
+        <Route exact path='/ListItems' component={ListItems} />
+        <Route exact path='/EditTitle' component={EditTitle} />
+        <Route exact path='/LogOut' component={LogOutPage} />
+        <div className='fullbackground'>
+          <div className='unscrollable'>
+            <div className='NavigationBar'>
+              <Link
+                exact
+                to={loggedIn ? '/LogOut' : '/Login'}
+                className='whiteIcon'>
+                <FaUser className='backIcon' />
+              </Link>
+              <span className='navTitle'> My Lists</span>
+              <Link
+                exact
+                to='/ListItems'
+                className={
+                  selectedList.title !== '' ? 'whiteIcon' : 'noDisplay'
+                }>
+                <AiFillFolderOpen className='openIcon' />
+              </Link>
+              <Link
+                exact
+                to='/EditTitle'
+                className={
+                  selectedList.title !== '' ? 'whiteIcon' : 'noDisplay'
+                }>
+                <MdModeEdit className='editIcon' />
+              </Link>
+              <MdDelete
+                className={
+                  selectedList.title !== '' ? 'deleteIcon' : 'noDisplay'
+                }
+                onClick={removeTitleHandler}
+              />
+            </div>
+
+            <form onSubmit={addTitleHandler} className='inputField'>
+              <input
+                placeholder='New List'
+                className='textField'
+                value={listTitle}
+                onChange={handleListTitle}
+                type='text'
+              />
+              <button type='submit' className='createListButton'>
+                CREATE
+              </button>
+            </form>
+          </div>
+          <div className='allTitles'>{ListOfTitles}</div>
+        </div>
+      </Switch>
+    </BrowserRouter>
   );
 };
 export default MyLists;

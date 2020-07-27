@@ -1,6 +1,7 @@
-export const loggedIn = () => {
+export const loggedIn = (detail) => {
   return {
     type: 'LOGGED_IN',
+    payload: detail,
   };
 };
 
@@ -71,6 +72,12 @@ export const errorFieldEmpty = () => {
   };
 };
 
+export const errorPrivacyPolicy = () => {
+  return {
+    type: 'PRIVACY_POLICY',
+  };
+};
+
 export const noError = () => {
   return {
     type: 'NO_ERROR',
@@ -119,23 +126,16 @@ export const sendSelectedItem = (detail) => {
   };
 };
 
-export const sendGoPreviousPage = (detail) => {
-  return {
-    type: 'SEND_GO_PREVIOUS_PAGE',
-    payload: detail,
-  };
-};
-
-export const sendEditType = (detail) => {
-  return {
-    type: 'SEND_EDIT_TYPE',
-    payload: detail,
-  };
-};
-
 export const sendId = (detail) => {
   return {
     type: 'SEND_ID',
+    payload: detail,
+  };
+};
+
+export const sendPrivacyDisplay = (detail) => {
+  return {
+    type: 'SEND_PRIVACY_DISPLAY',
     payload: detail,
   };
 };

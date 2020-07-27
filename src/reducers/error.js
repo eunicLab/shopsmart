@@ -6,6 +6,8 @@ const errorReducer = (state = '', action) => {
       return 'Incorrect email address or password';
     case 'REQUIRED_FIELD_EMPTY':
       return 'Required field empty';
+    case 'PRIVACY_POLICY':
+      return 'You must agree to the privacy policy';
     case 'NO_ERROR':
       return '';
     default:

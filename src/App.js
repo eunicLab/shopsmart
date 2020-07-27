@@ -1,21 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
 import LoginPage from './components/LoginPage';
 import MyLists from './components/MyLists';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ListItems from './components/ListItems';
 import EditTitle from './components/EditTitle';
+import EditItem from './components/EditItem';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import LogOutPage from './components/LogOutPage';
 
-function App() {
-  return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path='/' component={LoginPage} />
-        <Route exact path='/MyLists' component={MyLists} />
-        <Route exact path='/ListItems' component={ListItems} />
-        <Route exact path='/EditTitle' component={EditTitle} />
-      </Switch>
-    </BrowserRouter>
-  );
+class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <Switch>
+          <Route exact path='/Login' component={LoginPage} />
+          <Route exact path='/' component={MyLists} />
+          <Route exact path='/ListItems' component={ListItems} />
+          <Route exact path='/EditTitle' component={EditTitle} />
+          <Route exact path='/EditItem' component={EditItem} />
+          <Route exact path='/LogOut' component={LogOutPage} />
+          <Route exact path='/PrivacyPolicy' component={PrivacyPolicy} />
+        </Switch>
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;

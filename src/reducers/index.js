@@ -15,9 +15,8 @@ import listObjectReducer from './listObject';
 import selectedListReducer from './selectedList';
 import selectedItemReducer from './selectedItem';
 import navButtonDisplayReducer from './navButtonDisplay';
-import goPreviousPageReducer from './goPreviousPage';
-import editTypeReducer from './editType';
 import IdReducer from './id';
+import privacyDisplayReducer from './privacyDisplay';
 
 const allReducers = combineReducers({
   loggedIn: loggedInReducer,
@@ -35,9 +34,8 @@ const allReducers = combineReducers({
   selectedList: selectedListReducer,
   selectedItem: selectedItemReducer,
   navButtonDisplay: navButtonDisplayReducer,
-  goPreviousPage: goPreviousPageReducer,
-  editType: editTypeReducer,
   id: IdReducer,
+  privacyDisplay: privacyDisplayReducer,
   form: formReducer,
 });
 

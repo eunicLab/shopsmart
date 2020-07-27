@@ -1,11 +1,7 @@
 import React from 'react';
 import '../App.css';
 import { useSelector, useDispatch } from 'react-redux';
-import {
-  sendSelectedList,
-  sendNavButtonDisplay,
-  sendEditType,
-} from '../actions';
+import { sendSelectedList, sendNavButtonDisplay } from '../actions';
 
 let TitleList = (props) => {
   const selectedList = useSelector((state) => state.selectedList);
@@ -37,7 +33,6 @@ let TitleList = (props) => {
               })
             );
             dispatch(sendNavButtonDisplay(true));
-            dispatch(sendEditType('title'));
           }
         }}>
         {props.item.title}

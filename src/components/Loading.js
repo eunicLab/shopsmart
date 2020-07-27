@@ -4,7 +4,7 @@ import ReactLoading from 'react-loading';
 function Loading() {
   return (
     <div>
-      <ReactLoading type={'spin'} color={'#0000FF'} />
+      <ReactLoading type={'spin'} color={'green'} />
     </div>
   );
 }
