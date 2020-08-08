@@ -7,6 +7,7 @@ import EditTitle from './components/EditTitle';
 import EditItem from './components/EditItem';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import LogOutPage from './components/LogOutPage';
+import Home from './components/Home';
 
 class App extends Component {
   render() {
@@ -14,12 +15,13 @@ class App extends Component {
       <BrowserRouter>
         <Switch>
           <Route exact path='/Login' component={LoginPage} />
-          <Route exact path='/' component={MyLists} />
+          <Route exact path='/MyLists' component={MyLists} />
           <Route exact path='/ListItems' component={ListItems} />
           <Route exact path='/EditTitle' component={EditTitle} />
           <Route exact path='/EditItem' component={EditItem} />
           <Route exact path='/LogOut' component={LogOutPage} />
           <Route exact path='/PrivacyPolicy' component={PrivacyPolicy} />
+          <Route exact Path='/' component={Home} />
         </Switch>
       </BrowserRouter>
     );

@@ -26,6 +26,7 @@ import MyCheck from './MyCheck';
 import { IoMdArrowRoundBack } from 'react-icons/io';
 import MyLists from './MyLists';
 import ListItems from './ListItems';
+import Home from './Home';
 
 let LoginForm = (props) => {
   const signUpTop = useSelector((state) => state.signUpTop);
@@ -157,14 +158,15 @@ let LoginForm = (props) => {
     <BrowserRouter>
       <Switch>
         <Route path='/PrivacyPolicy' exact component={PrivacyPolicy} />
-        <Route path='/' exact component={MyLists} />
+        <Route path='/MyLists' exact component={MyLists} />
+        <Route path='/' exact component={Home} />
         <Route exact path='/ListItems' component={ListItems} />
         <div>
-          <div className='NavigationBar'>
+          {/*<div className='NavigationBar'>
             <Link exact to='/' className='whiteIcon'>
               <IoMdArrowRoundBack className='backIcon' />
             </Link>
-          </div>
+  </div>*/}
           <div className='fullBackground'>
             <form
               onSubmit={handleSubmit(loginSubmit)}
@@ -245,7 +247,7 @@ let LoginForm = (props) => {
       </Switch>
     </BrowserRouter>
   ) : (
-    <Redirect push to='/' />
+    <Redirect push to='/MyLists' />
   );
 };
 

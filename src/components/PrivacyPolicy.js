@@ -12,10 +12,10 @@ let PrivacyPolciy = () => {
         <div className='fullbackground'>
           <div className='unscrollable'>
             <div className='NavigationBar'>
-              <Link exact to='/Login' className='whiteIcon'>
+              {/*<Link exact to='/Login' className='whiteIcon'>
                 <IoMdArrowRoundBack className='backIcon' />
-              </Link>
-              <span className='navTitle'> Privacy Policy</span>
+  </Link>*/}
+              <span className='navTitle2'> Privacy Policy</span>
             </div>
           </div>
           <div className='allTitles'>

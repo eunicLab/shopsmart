@@ -97,6 +97,7 @@ let TitleList = (props) => {
         handleCheckboxFalse={handleCheckBoxTrue}
       />
       <span
+        className={props.item.checked ? 'itemChecked' : 'itemUnchecked'}
         onClick={(event) => {
           if (selectedItem.id === props.item.id) {
             dispatch(
@@ -122,7 +123,10 @@ let TitleList = (props) => {
           }
         }}>
         {props.item.item}
-        <span className='price'>{props.item.price}</span>
+        <span
+          className={props.item.checked ? 'priceChecked' : 'priceUnchecked'}>
+          {props.item.price}
+        </span>
       </span>
     </div>
   );

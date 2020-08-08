@@ -272,6 +272,13 @@ button:focus {
   cursor: pointer;
 }
 
+.itemChecked {
+  color: #b2beb5;
+}
+.itemUnchecked {
+  color: black;
+}
+
 .checkbox {
   margin-left: 5%;
   margin-right: 2%;
@@ -377,8 +384,13 @@ button:focus {
 .budgetTitlePage {
   float: right;
 }
-.price {
+.priceChecked {
   float: right;
+  color: #b2beb5;
+}
+.priceUnchecked {
+  float: right;
+  color: black;
 }
 
 .mainHeading {
@@ -461,6 +473,11 @@ button:focus {
   font-size: x-large;
 }
 
+.navTitle2 {
+  font-size: x-large;
+  margin-left: 5%;
+}
+
 @media (max-width: 36.25em) {
   .backIcon {
     margin-right: 5%;
@@ -470,6 +487,10 @@ button:focus {
     cursor: pointer;
   }
   .navTitle {
+    font-size: large;
+  }
+
+  .navTitle2 {
     font-size: large;
   }
 
@@ -529,6 +550,7 @@ button:focus {
     z-index: 1;
     height: 400px;
   }
+
   .loginPageForm {
     color: rgb(44, 37, 37);
     background: -webkit-linear-gradient(bottom, #cccccc, #eeeeee 175px);
@@ -690,4 +712,191 @@ button:focus {
 
 .privacyLine {
   font-size: 80%;
+}
+
+.homeBackground {
+  background-image: url(./images/homeBackground.jpeg);
+  height: 95vh;
+  background-size: cover;
+  background-position: top;
+}
+
+.homeFullBackground {
+  overflow-y: hidden;
+  overflow-x: visible;
+}
+
+.footer {
+  background-color: green;
+  color: white;
+  padding: 2.25%;
+  height: 0.5vh;
+  width: 100%;
+  text-align: center;
+  font-size: small;
+  font-weight: bold;
+}
+
+.footerContactUs {
+  width: 20%;
+  cursor: pointer;
+  text-align: left;
+  color: white;
+  margin-right: 5%;
+}
+
+.footerDesigner {
+  width: 20%;
+  cursor: pointer;
+  text-align: center;
+  margin-right: 5%;
+}
+
+.footerPrivacyPolicy {
+  width: 20%;
+  text-align: right;
+  cursor: pointer;
+  color: white;
+}
+
+.homeNavigation {
+  background-color: green;
+  color: white;
+  font-size: 20px;
+  height: 0.5vh;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  padding: 2.25%;
+}
+
+.ishopsmartText {
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 20%;
+  width: 100%;
+  color: green;
+  font-weight: bolder;
+  font-size: 45px;
+}
+
+.secondaryTextHome {
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  width: 100%;
+  color: green;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.navHomeText {
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.navHomeText2 {
+  color: white;
+
+  font-weight: bolder;
+  cursor: pointer;
+  text-decoration-line: none;
+  right: 10%;
+  position: absolute;
+  text-align: right;
+}
+
+.HomeSection2 {
+  height: 83vh;
+  background-color: white;
+  width: 100%;
+}
+
+.HomeSection3 {
+  height: 83vh;
+  background-color: whitesmoke;
+  width: 100%;
+}
+
+.phoneImage {
+  height: 80%;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 15%;
+}
+
+.textBoard {
+  padding: 10%;
+  background-color: green;
+  margin-top: 10%;
+  position: absolute;
+  text-align: center;
+  font-size: 34px;
+  border-style: solid;
+  border-color: rgb(48, 2, 2);
+  border-width: 20px;
+  color: white;
+  width: 20%;
+}
+
+.iShopSmartLogo {
+  margin-top: 5%;
+  float: left;
+  width: 40%;
+}
+
+.googleBadge {
+  width: 30%;
+  margin-left: 10%;
+  margin-top: 5%;
+  cursor: pointer;
+}
+
+.webBadge {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  border-radius: 8px;
+  width: 26%;
+  margin-left: 52%;
+  margin-top: 5%;
+  cursor: pointer;
+  font-size: larger;
+  font-weight: bolder;
+  text-decoration-line: none;
+}
+
+@media (max-width: 36.25em) {
+  .footer {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  .HomeSection2 {
+    width: 100%;
+  }
+  .phoneImage {
+    width: 40%;
+    margin-right: 5%;
+  }
+  .textBoard {
+    font-size: 18px;
+  }
+  .homeNavigation {
+    font-size: 15px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    padding: 5%;
+  }
 }
