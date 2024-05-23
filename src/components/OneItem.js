@@ -63,7 +63,7 @@ let TitleList = (props) => {
     return (
       axios
         .put(
-          'https://shopsmart1234.herokuapp.com/api/stuff/' + id,
+          'https://ishopsmartbackend.azurewebsites.net/api/stuff/' + id,
           {
             listObject: currentListObject,
           },

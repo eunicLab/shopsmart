@@ -54,7 +54,7 @@ let LoginForm = (props) => {
         dispatch(noDisplayLoadingImage());
       } else {
         axios
-          .post('https://shopsmart1234.herokuapp.com/api/auth/login', {
+          .post('https://ishopsmartbackend.azurewebsites.net/api/auth/login', {
             email: values.email.toLowerCase(),
             password: values.password,
           })
@@ -71,7 +71,7 @@ let LoginForm = (props) => {
                 })
               );
 
-              var api = 'https://shopsmart1234.herokuapp.com/api/stuff';
+              var api = 'https://ishopsmartbackend.azurewebsites.net/api/stuff';
               axios
                 .get(api, {
                   params: {
@@ -93,9 +93,9 @@ let LoginForm = (props) => {
       }
     }
     if (signUpTop === 'buttonTopActive') {
-      var api2 = 'https://shopsmart1234.herokuapp.com/api/stuff';
+      var api2 = 'https://ishopsmartbackend.azurewebsites.net/api/stuff';
 
-      var api1 = 'https://shopsmart1234.herokuapp.com/api/auth/signup';
+      var api1 = 'https://ishopsmartbackend.azurewebsites.net/api/auth/signup';
       if (
         values.email === undefined ||
         values.password === undefined ||
@@ -122,7 +122,7 @@ let LoginForm = (props) => {
           .then(
             (response) => {
               axios
-                .post('https://shopsmart1234.herokuapp.com/api/auth/login', {
+                .post('https://ishopsmartbackend.azurewebsites.net/api/auth/login', {
                   email: values.email.toLowerCase(),
                   password: values.password,
                 })

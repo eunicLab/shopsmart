@@ -57,7 +57,7 @@ let MyLists = () => {
       };
       axios
         .put(
-          'https://shopsmart1234.herokuapp.com/api/stuff/' + id,
+          'https://ishopsmartbackend.azurewebsites.net/api/stuff/' + id,
           backendObject,
           {
             headers: { Authorization: `Bearer ${loginData.token}` },
@@ -76,7 +76,7 @@ let MyLists = () => {
     dispatch(sendListObject(backendObject));
     axios
       .put(
-        'https://shopsmart1234.herokuapp.com/api/stuff/' + id,
+        'https://ishopsmartbackend.azurewebsites.net/api/stuff/' + id,
         { listObject: backendObject },
         {
           headers: { Authorization: `Bearer ${loginData.token}` },
