@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
-import { GrFacebook } from 'react-icons/gr';
-import { FiInstagram } from 'react-icons/fi';
-import { IoLogoTwitter } from 'react-icons/io';
 import '../App.css';
 import phoneScreenShot from '../images/phoneScreenShot.webp';
 import iShopSmartLogo from '../images/IShopSmart-logo.png';
@@ -29,7 +26,7 @@ let Home = () => {
       count === 6 ? (count = 0) : count++;
       setFeature(features[count]);
     }, 3000);
-  }, []);
+  });
 
   return (
     <BrowserRouter>
@@ -49,7 +46,7 @@ let Home = () => {
             <div className='secondaryTextHome'>List. Buy. Check</div>
           </div>
           <div className='HomeSection2'>
-            <img src={phoneScreenShot} className='phoneImage' />
+            <img src={phoneScreenShot} alt='phone' className='phoneImage' />
             <span className='textBoard'>{feature}</span>
           </div>
           <div className='HomeSection3'>

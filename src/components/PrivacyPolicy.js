@@ -1,8 +1,8 @@
 import React from 'react';
 import '../App.css';
 import LoginPage from './LoginPage';
-import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
-import { IoMdArrowRoundBack } from 'react-icons/io';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 
 let PrivacyPolciy = () => {
   return (

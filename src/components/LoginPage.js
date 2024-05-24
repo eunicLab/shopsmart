@@ -23,7 +23,6 @@ import { BrowserRouter, Link, Route, Switch, Redirect } from 'react-router-dom';
 import Loading from './Loading.js';
 import PrivacyPolicy from './PrivacyPolicy';
 import MyCheck from './MyCheck';
-import { IoMdArrowRoundBack } from 'react-icons/io';
 import MyLists from './MyLists';
 import ListItems from './ListItems';
 import Home from './Home';
