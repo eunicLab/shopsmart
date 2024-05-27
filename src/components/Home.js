@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import '../App.css';
 import phoneScreenShot from '../images/phoneScreenShot.webp';
@@ -9,7 +9,7 @@ import MyLists from './MyLists';
 import PrivacyPolicy from './PrivacyPolicy';
 
 let Home = () => {
-  let features = [
+  const features = useMemo(()=> [
     'Easy to use shopping list app',
     'Make and manage unlimited lists',
     'Set a Budget to manage spending',
@@ -17,7 +17,7 @@ let Home = () => {
     'Available on Google Play store',
     'Web version also available',
     'Shopping is fun with IShopSmart',
-  ];
+  ], []);
   const [feature, setFeature] = useState(features[0]);
 
   useEffect(() => {
