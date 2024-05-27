@@ -38,9 +38,9 @@
 }
 .loginPageForm {
   color: rgb(44, 37, 37);
-  background: -webkit-linear-gradient(bottom, #cccccc, #eeeeee 175px);
-  background: -moz-linear-gradient(bottom, #cccccc, #eeeeee 175px);
-  background: linear-gradient(bottom, #cccccc, #eeeeee 175px);
+  background: -webkit-linear-gradient(to bottom, #cccccc, #eeeeee 175px);
+  background: -moz-linear-gradient(to bottom, #cccccc, #eeeeee 175px);
+  background: linear-gradient(to bottom, #cccccc, #eeeeee 175px);
   margin-right: 5%;
   margin-top: 0%;
   margin-bottom: 1%;
@@ -553,9 +553,9 @@ button:focus {
 
   .loginPageForm {
     color: rgb(44, 37, 37);
-    background: -webkit-linear-gradient(bottom, #cccccc, #eeeeee 175px);
-    background: -moz-linear-gradient(bottom, #cccccc, #eeeeee 175px);
-    background: linear-gradient(bottom, #cccccc, #eeeeee 175px);
+    background: -webkit-linear-gradient(to bottom, #cccccc, #eeeeee 175px);
+    background: -moz-linear-gradient(to bottom, #cccccc, #eeeeee 175px);
+    background: linear-gradient(to bottom, #cccccc, #eeeeee 175px);
     margin-left: 0%;
     margin-right: 0%;
     margin-top: 10%;
