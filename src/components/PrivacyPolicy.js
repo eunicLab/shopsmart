@@ -492,7 +492,13 @@ let PrivacyPolciy = () => {
               completely or comprehensively removed from our systems.
             </p>
             <p className='mainHeading'>
-              11. DO WE MAKE UPDATES TO THIS POLICY?{' '}
+              11. HOW TO REQUEST DELETION OF ACCOUNT AND ASSOCIATED DATA
+            </p>
+            <p className='paragraph'>
+              To request the deletion of your account and all associated data, please email us at eunicLab.co@gmail.com.
+            </p>
+            <p className='mainHeading'>
+              12. DO WE MAKE UPDATES TO THIS POLICY?{' '}
             </p>
             <p className='paragraph'>
               We may update this privacy policy from time to time. The updated
@@ -505,7 +511,7 @@ let PrivacyPolciy = () => {
               protecting your information.
             </p>
             <p className='mainHeading'>
-              12. HOW CAN YOU CONTACT US ABOUT THIS POLICY?
+              13. HOW CAN YOU CONTACT US ABOUT THIS POLICY?
             </p>
             <p className='paragraph'>
               If you have questions or comments about this policy, you may
@@ -517,7 +523,7 @@ let PrivacyPolciy = () => {
               the processing of your information by eunicLab, by email at
               eunicLab.co@gmail.com.
             </p>
-            <p className='subHeading'>Last updated July 26, 2020</p>
+            <p className='subHeading'>Revised date June 28, 2024</p>
           </div>
         </div>
       </Switch>
